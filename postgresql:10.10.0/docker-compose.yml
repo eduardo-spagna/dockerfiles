@@ -1,0 +1,14 @@
+#  docker-compose up db
+
+version: "3"
+services:
+  db:
+    image: postgres:latest
+    container_name: "postgres"
+    environment:
+      - POSTGRES_DB=template1
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - TZ=GMT
+    ports:
+      - 5432:5432
